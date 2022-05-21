@@ -1,0 +1,28 @@
+{% extends "base2.html" %}
+
+
+{% block foo %}
+{% load static %}
+<center>
+<div class="container">
+<div class="card col-4 text-center m-auto mt-5">
+<h1 class="card-header" style="font-weight: bolder ;color: blue;" >Enter the food details</h1>
+<div class="card-body">
+<form method="post">
+{% csrf_token %}
+<label style="color: seagreen;">Item Name:</label>
+<input type="text" name="name" required="true"><br><br>
+<label style="color: seagreen;">type:</label>
+<input type="text" name="ftype" required="true"><br><br>
+<label style="color: seagreen;">Price:</label>
+<input type="number" name="cost" required="true"><br><br>
+<button type="submit" class="btn btn-outline-success">ADD</button>
+</form>
+</div>
+<div class="card-footer">
+    <h3 style="color: skyblue;">Enter the correct information</h3></div>
+</div>
+</div>
+</div>
+</center>
+{% endblock %}

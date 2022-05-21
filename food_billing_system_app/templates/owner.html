@@ -1,0 +1,67 @@
+{% extends "base1.html" %}
+
+{% block foo %}
+{% load static %}
+<div class="container">
+	<center>
+        <h1 style="color: red;font-weight: bold,;background-color: seagreen;">Welcome {{request.user}}</h1>
+    </center>
+    </div>
+	<div class="container">
+		
+			<div class="items">
+			<a href="{% url 'calc' %}">
+			<img src="{% static 'img/3.png' %}" alt="Calculate" class="thumbnail" >
+			<div class="caption">
+			<h2>Calculator</h2>
+			<p></p>
+			</div>
+			</a>
+			</div>
+
+			<div class="items">
+			<a href="{% url 'empman' %}">
+			<img src="{% static 'img/2.png' %}" alt="Employee Management" class="thumbnail">
+			<div class="caption">
+			<h2>Employee Management</h2>
+			<p></p>
+			</div>
+			</a>
+			</div>
+
+			<div class="items">
+			<a href="{% url 'menuadd' %}">
+			<img src="{% static 'img/menu.jpg' %}" alt="Menu Modification" class="thumbnail" >
+			<div class="caption">
+			<h2>Menu Modification</h2>
+			<p></p>
+			</div>
+			</a>
+			</div>
+	</div>
+	<div class="container">
+		<center>
+
+			<div class="items">
+			<a href="{% url 'cust1' %}">
+			<img src="{% static 'img/c.jpg' %}" alt="Customer Detail" class="thumbnail">
+			<div class="caption">
+			<h2>Customer Details</h2>
+			<p></p>
+			</div>
+			</a>
+			</div>
+
+			<div class="items">
+			<a href="{% url 'payment' %}">
+			<img src="{% static 'img/f.jpg' %}" alt="Payment" class="thumbnail">
+			<div class="caption">
+			<h2>Payment</h2>
+			<p></p>
+			</div>
+			</a>
+			</div>
+		</center>
+	</div>
+	
+{% endblock %}

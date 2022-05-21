@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <title>Food billing system</title>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    </head>
+    <body id="BG" style="background-image: url('{% static 'img/h.jpg' %}');" required="true" required="true">
+        <div class="container">
+            <div class="row rowstyle">
+                <div class="col-xs-6 col-xs-offset-3">
+                    
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h2>CHOOSE PAYMENT METHOD</h2>
+                        </div>
+                        <div class="panel-body">
+                            <form method="post">
+    
+            
+            BANK NAME       :<input type="text" placeholder="enter bank name" required="true" required="true" ><br><br>
+            USER NAME        :<input type="text" placeholder="enter user name" required="true" ><br><br>
+            PASSWORD        :<input type="text" placeholder="enter Password" required="true" ><br><br>
+            <a href="{% url 'sucess1' %}">  
+                <button type="button" name='pay'>
+                    Pay</button>   
+            </a> 
+            </form> 
+                        </div>
+                        <div class="panel-footer">
+                            <p>ENTER THE CORRECT INFORMATION</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+</body>
+</html>

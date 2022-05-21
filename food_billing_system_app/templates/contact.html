@@ -1,0 +1,118 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <title>Food Billing System</title>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+        <style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.flip-card {
+  background-color: transparent;
+  margin-left: 100px;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  float:left; //I just added this positioning.
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+p{
+    font-size: 15px;
+}
+</style>
+
+</head>
+<body id="BG" style="background-image: url('{% static 'img/i.jpg' %}');">
+    </head>
+    <body>
+        <div class="container">
+                <center>
+                <h1 style="background-color:seagreen;color: red; font-size:50px ;">Contact Us</h1>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        <img src="{% static 'img/vardhan.jpeg' %}" alt="Vardhan" class="thumbnail" >
+                        </div>
+                        <div class="flip-card-back">
+                        <h1>K Sai Vardhan</h1> 
+                        <p>saivardhan_kadambala@srmap.edu.in</p> 
+                        <p>AP19110010211</p> 
+                        <p>+91 7032439634</p>
+                        <p></p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="flip-card">
+                        <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        <img src="{% static 'img/likitha.jpeg' %}" alt="Likitha" class="thumbnail" >
+                        </div>
+                        <div class="flip-card-back">
+                        <h1>T Sai Likitha</h1> 
+                        <p>likitha_thotakura@srmap.edu.in</p> 
+                        <p>AP19110010272</p> 
+                        <p>+91 7702229902</p>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="flip-card">
+                        <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                        <img src="{% static 'img/dev.jpeg' %}" alt="Dev" class="thumbnail" >
+                        </div>
+                        <div class="flip-card-back">
+                        <h1>M Devendra Sai</h1>
+                        <p>devendrasai_mupparaju@srmap.edu.in</p> 
+                        <p>AP19110010279</p> 
+                        <p>+91 9704937015</p>
+                        </div>
+                        </div>
+                        </div>
+
+                </center>
+        </div>
+</body>
+</html>

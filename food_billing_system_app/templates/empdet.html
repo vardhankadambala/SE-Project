@@ -1,0 +1,30 @@
+{% extends "base1.html" %}
+
+{% block foo %}
+{% load static %}
+<center>
+<h1 style="background-color: seagreen; color: red;">Employee management form</h1>
+
+<table class="table " style="background-color: white;">
+			
+			<tr>
+				
+				<th>Employee User name</th>
+				<th>Employee Phone Number</th>
+				<th>Employee Address</th>
+				
+			</tr>
+
+			{% for i in data %}
+			<tr>
+					<td>{{i.user}}</td>
+					<td>{{i.phone}}</td>
+					<td>{{i.address}}</td>
+					<td><button class="btn btn-outline-danger btn-link"><a href="{% url 'delete2' i.id %}">Delete</a></button></td>
+
+			</tr>
+			{% endfor %}
+		
+		</table>
+</center>		
+{% endblock %}

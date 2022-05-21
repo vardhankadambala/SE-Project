@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block foo %}
+{% load static %}
+<center>
+<div class="container">
+<div class="card col-5 text-center m-auto mt-5">
+<h1 class="card-header" style="font-weight: bolder ;color: blue;" >Signup into Employee Account</h1>
+<div class="card-body">
+<form method="post">
+	{% csrf_token %}
+{{form.as_p}}
+<button type="submit" class="btn btn-outline-success">Signup</button>
+</form>
+</div>
+<div class="card-footer"><h3 style="color: seagreen;">Alredy have an account <a href="{% url 'login1' %}">click here</a> to login into employee account</h3></div>
+</div>
+</div>
+</center>
+{% endblock %}

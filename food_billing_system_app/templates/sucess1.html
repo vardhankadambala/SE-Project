@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <title>Food billing system</title>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron rowstyle">
+                <h1>Your order is confirmed.</h1>
+                <p>Thank you for shopping 
+                    with us. <a href="{% url 'employee' %}">Click here</a> to continue</p>
+            </div>
+        </div>
+</body>
+</html>

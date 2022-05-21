@@ -1,0 +1,34 @@
+{% extends "base1.html" %}
+
+{% block foo %}
+{% load static %}
+<center>
+<h1 style="background-color: seagreen; color: red;">Customer Details</h1>
+
+<table class="table " style="background-color: white;">
+			
+			<tr>
+				
+				<th>Customer name</th>
+				
+				<th>Customer Phone Number</th>
+				<th>Customer Address</th>
+				<th>payment type</th>
+				<th>Amount</th>
+			</tr>
+
+			{% for i in data %}
+			<tr>
+					<td>{{i.cname}}</td>
+					<td>{{i.cphone}}</td>
+					<td>{{i.caddress}}</td>
+					<td>{{i.ctype}}</td>
+					<td>{{i.camount}}</td>
+					<td><button class="btn btn-outline-danger btn-link"><a href="{% url 'delete3' i.id %}">Delete</a></button></td>
+
+			</tr>
+			{% endfor %}
+		
+		</table>
+</center>		
+{% endblock %}

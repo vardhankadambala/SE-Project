@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block foo %}
+{% load static %}
+<center>
+<div class="container">
+<div class="card col-4 text-center m-auto mt-5">
+<h1 class="card-header" style="font-weight: bolder ;color: blue;" >Change your password</h1>
+<div class="card-body">
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+<button type="submit" class="btn btn-outline-success">Change</button>
+</form>
+</div>
+</div>
+</div>
+</center>
+{% endblock %}

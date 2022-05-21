@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block foo %}
+{% load static %}
+
+<div class="header">
+    <div class="innerhedder">
+        <center>
+        <div class="logo1">
+            <h2 style="color: red;font-family:'Trebuchet MS'">Welcome to the food billing system</h2>
+        </div>
+        </center>
+    </div>
+</div>
+
+
+<center>
+<div class="content">  
+            <div class="bannerimage">
+                <div class="innerbannerimage">
+                    <center>
+                    <div class="bannercontent">
+                        <div class="items">
+                <a href="{% url 'login' %}">
+                    <img src="{% static 'img/owner.jpg' %}" alt="owner" width="100" height="150" >
+                    <div class="caption">
+                        <h2>Owner</h2>
+                    </div>
+                </a>
+                <a href="{% url 'login' %}">
+
+                    <button type="button">
+                        Login
+                    </button> 
+                </a> 
+            </div>
+       
+        
+        
+            <div class="items">
+                <a href="{% url 'login1' %}">
+                    <img src="{% static 'img/employee.png' %}" alt="employee" width="100" height="150" >
+                    <div class="caption">
+                        <h2>Employee</h2>
+                    </div>
+                </a>
+                <a href="{% url 'login1' %}">
+
+                    <button type="button">
+                        Login
+                    </button> 
+                </a> 
+            </div>
+
+            <div class="items">
+                <a href="{% url 'index1' %}">
+                    <img src="{% static 'img/employee.png' %}" alt="employee" width="100" height="150" >
+                    <div class="caption">
+                        <h2>signup</h2>
+                    </div>
+                </a>
+                <a href="{% url 'index1' %}">
+
+                    <button type="button">
+                        Signup
+                    </button> 
+                </a>  
+            </div>
+
+
+
+
+
+        </div>
+                    </div>
+                    </center>
+                </div>     
+            </div>
+        </div>
+</center>
+{% endblock %}

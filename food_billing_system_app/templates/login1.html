@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block foo %}
+{% load static %}
+<center>
+    <div class="bannerimage">
+<div class="container mt-8" class="pa">
+<div class="card col-4 text-center m-auto mt-8">
+<h1 class="card-header" style="font-weight: bolder ;color: blue;" >Login into Employee Account</h1>
+<div class="card-body">
+<form method="post">
+{% csrf_token %}
+<label style="color: seagreen;">Username:</label>
+<input type="text" name="uname" required="true"><br><br>
+<label style="color: seagreen;">Password:</label>
+<input type="password" name="pswd" required="true"><br><br>
+<button type="submit" class="btn btn-outline-success">Login</button>
+</form>
+
+
+</div>
+<div class="card-footer"><h3 style="color: skyblue;">If you are new <a href="{% url 'signup1' %}">click here</a> to register in to employee account</h3></div>
+</div>
+</div>
+</div>
+</center>
+{% endblock %}

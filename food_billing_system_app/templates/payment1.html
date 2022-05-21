@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+
+        <title>Food billing system</title>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    </head>
+    <body id="BG" style="background-image: url('{% static 'img/h.jpg' %}');">
+
+        <div class="container">
+            <div class="row rowstyle">
+                <div class="col-xs-6 col-xs-offset-3">
+                    
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h2>CHOOSE PAYMENT METHOD</h2>
+                        </div>
+                        <div class="panel-body">
+                            <form method="post">
+                             <a href="{% url 'cre_deb1' %}">   
+                                CREDIT/DEBIT CARD  
+                             </a> <br><br>
+                             <a href="{% url 'netbank1' %}">   
+                                NET BANKING  
+                             </a> <br><br>
+                             <a href="{% url 'sucess1' %}">   
+                                CASH/UPI 
+                             </a>
+                            </form>
+                              
+                         </div>
+                        <div class="panel-footer">
+                            <p>CHOOSING PARTICULAR OPTION THE PAGE WILL REDIRECT</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>  
+</body>
+</html>
